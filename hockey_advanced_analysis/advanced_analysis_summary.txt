@@ -1,0 +1,49 @@
+HOCKEY ADVANCED ANALYSIS SUMMARY
+===============================
+
+1. SHOT-PASSING INTEGRATION ANALYSIS
+-----------------------------------
+- Analyzed 500 shots with preceding pass information
+- Average number of passes before a shot: 2.37
+
+Shot success rate by number of preceding passes:
+  0 pass(es): 74.1%
+  1 pass(es): 54.1%
+  2 pass(es): 51.7%
+  3 pass(es): 54.0%
+  4 pass(es): 50.0%
+  5 pass(es): 63.9%
+  6 pass(es): 60.0%
+
+Shot distribution by zone:
+  Offensive: 96.8%
+  Neutral: 2.6%
+  Defensive: 0.6%
+
+2. GAME SITUATION ANALYSIS
+-------------------------
+Pass success rates by situation:
+  - Overall: 74.4%
+  - Late Game: 66.5%
+  - Trailing: 73.2%
+  - Leading: 76.4%
+
+Passing in the last 2 minutes of regulation:
+  - Number of passes: 134
+  - Success rate: 67.9%
+
+3. KEY FINDINGS
+-------------
+1. The relationship between passing and shooting success shows that [interpret your results]
+2. Teams modify their passing strategy when trailing/leading, with [interpret differences]
+3. Late game situations show [interpret late game patterns]
+4. The most successful shot sequences typically involve [interpret shot sequence patterns]
+5. Zone transitions vary significantly by game situation, particularly [note key differences]
+
+4. RECOMMENDATIONS FOR FURTHER ANALYSIS
+------------------------------------
+1. Expand analysis to include face-offs and their relationship to passing sequences
+2. Create player chemistry metrics based on successful passing connections
+3. Develop predictive models for shot success based on pass characteristics
+4. Analyze defensive disruptions of passing sequences
+5. Investigate team-specific passing strategies and counter-strategies

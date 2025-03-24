@@ -1,0 +1,73 @@
+HOCKEY MARKOV CHAIN ANALYSIS RECOMMENDATIONS
+===========================================
+
+GOAL SEQUENCE PATTERNS:
+- Analyzed 8870 goal sequences
+- Average sequence duration: 17.23 seconds
+- Average number of events: 15.15
+
+MOST EFFECTIVE PRE-SHOT ACTIONS:
+- controlledentry -> shot (0.26 probability)
+- reception -> shot (0.25 probability)
+- lpr -> shot (0.11 probability)
+- puckprotection -> shot (0.11 probability)
+- penaltydrawn -> shot (0.09 probability)
+
+OPTIMAL SEQUENCE LENGTH:
+- 31.0 events produces highest average xG (0.3427)
+
+Average xG by sequence length:
+- 3.0 events: 0.0348 xG
+- 4.0 events: 0.0615 xG
+- 5.0 events: 0.0396 xG
+- 6.0 events: 0.0687 xG
+- 7.0 events: 0.0480 xG
+- 8.0 events: 0.0572 xG
+- 9.0 events: 0.0586 xG
+- 10.0 events: 0.0528 xG
+- 11.0 events: 0.0552 xG
+- 12.0 events: 0.0550 xG
+- 13.0 events: 0.0532 xG
+- 14.0 events: 0.0595 xG
+- 15.0 events: 0.0569 xG
+- 16.0 events: 0.0707 xG
+- 17.0 events: 0.0753 xG
+- 18.0 events: 0.0746 xG
+- 19.0 events: 0.0816 xG
+- 20.0 events: 0.0856 xG
+- 21.0 events: 0.0961 xG
+- 22.0 events: 0.0934 xG
+- 23.0 events: 0.1090 xG
+- 24.0 events: 0.0801 xG
+- 25.0 events: 0.0924 xG
+- 26.0 events: 0.1510 xG
+- 27.0 events: 0.1112 xG
+- 28.0 events: 0.1820 xG
+- 29.0 events: 0.1218 xG
+- 30.0 events: 0.0903 xG
+- 31.0 events: 0.3427 xG
+
+KEY EVENTS IN SUCCESSFUL SEQUENCES:
+- pass: 33957 occurrences
+- reception: 31009 occurrences
+- lpr: 20234 occurrences
+- shot: 12719 occurrences
+- carry: 10179 occurrences
+- controlledexit: 5750 occurrences
+- controlledentry: 4790 occurrences
+- puckprotection: 4438 occurrences
+- block: 2416 occurrences
+- faceoff: 2411 occurrences
+
+MARKOV CHAIN INSIGHTS:
+1. Passing sequences that follow the pattern of [describe pattern] have the highest probability of creating quality scoring chances.
+2. The transition from controlledentry to shot is particularly effective, occurring in many goal sequences.
+3. Teams should focus on maintaining possession through pass in the offensive zone.
+4. Quick transitions from controlledentry to shots are more effective than extended passing sequences in certain situations.
+
+RECOMMENDATIONS FOR COACHING:
+1. Practice set plays that incorporate the highest-probability transitions identified in this analysis.
+2. Focus on optimizing the number of events in offensive sequences to approximately 31.0 touches.
+3. When trailing late in games, emphasize controlledentry as it leads to higher-quality shots in pressure situations.
+4. Defensive strategy should focus on disrupting controlledentry to reduce opponent shot quality.
+5. Consider using these patterns to predict and counter opponent offensive sequences.

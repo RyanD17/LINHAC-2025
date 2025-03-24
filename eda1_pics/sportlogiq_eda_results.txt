@@ -1,0 +1,342 @@
+SPORTLOGIQ DATA ANALYSIS RESULTS
+===============================
+
+
+
+================================================================================
+================================= DATA LOADING =================================
+================================================================================
+
+Dataset Shape: (541802, 22)
+First 5 rows of the dataset:
+   gameid  opposingteamgoalieoniceid  opposingteamid  playerid  teamgoalieoniceid  teamid  teaminpossession  currentpossession  xg_allattempts  compiledgametime eventname  ishomegame manpowersituation  opposingteamskatersonicecount     outcome  period playerprimaryposition  scoredifferential  teamskatersonicecount              type  xadjcoord  yadjcoord
+0   72393                   553243.0             885    489917           172367.0     814               NaN                NaN             NaN          0.000000   faceoff           1      evenStrength                              5      failed       1                     F                  0                      5              none   0.304306   0.251442
+1   72393                   172367.0             814    435025           553243.0     885               NaN                NaN             NaN          0.000000   faceoff           0      evenStrength                              5  successful       1                     F                  0                      5         recovered  -0.304306  -0.251442
+2   72393                   172367.0             814    435025           553243.0     885             885.0                0.0             NaN          1.333333       lpr           0      evenStrength                              5  successful       1                     F                  0                      5  faceoffcontested   0.205826   0.245975
+3   72393                   553243.0             885    489917           172367.0     814             885.0                0.0             NaN          1.333333       lpr           1      evenStrength                              5      failed       1                     F                  0                      5         contested  -0.205826  -0.245975
+4   72393                   172367.0             814    435025           553243.0     885             885.0                0.0             NaN          2.166667      pass           0      evenStrength                              5  successful       1                     F                  0                      5             south   3.223473   3.766563
+
+================================================================================
+=============================== DATASET OVERVIEW ===============================
+================================================================================
+
+
+
+================================================================================
+=============================== DATASET OVERVIEW ===============================
+================================================================================
+
+Missing Values Summary:
+                           Missing Values  Percentage
+opposingteamgoalieoniceid            3266    0.602803
+teamgoalieoniceid                    7080    1.306750
+teaminpossession                    73890   13.637823
+currentpossession                   73890   13.637823
+xg_allattempts                     525454   96.982662
+
+Data Types:
+gameid                             int64
+opposingteamgoalieoniceid        float64
+opposingteamid                     int64
+playerid                           int64
+teamgoalieoniceid                float64
+teamid                             int64
+teaminpossession                 float64
+currentpossession                float64
+xg_allattempts                   float64
+compiledgametime                 float64
+eventname                         object
+ishomegame                         int64
+manpowersituation                 object
+opposingteamskatersonicecount      int64
+outcome                           object
+period                             int64
+playerprimaryposition             object
+scoredifferential                  int64
+teamskatersonicecount              int64
+type                              object
+xadjcoord                        float64
+yadjcoord                        float64
+
+Numerical Features - Summary Statistics:
+              gameid  opposingteamgoalieoniceid  opposingteamid       playerid  teamgoalieoniceid         teamid  teaminpossession  currentpossession  xg_allattempts  compiledgametime     ishomegame  opposingteamskatersonicecount         period  scoredifferential  teamskatersonicecount      xadjcoord      yadjcoord
+count  541802.000000              538536.000000   541802.000000  541802.000000      534722.000000  541802.000000     467912.000000      467912.000000    16348.000000     541802.000000  541802.000000                  541802.000000  541802.000000      541802.000000          541802.000000  541802.000000  541802.000000
+mean    75565.582174              417210.289533      744.841868  520438.759790      422826.612389     742.239517        741.937228         270.067692        0.048487       1813.248270       0.505749                       4.866785       2.019880          -0.045939               4.950742      -5.072083       0.218556
+std      8961.732415              265919.419113      125.166926  278468.891163      265670.504630     125.379980        125.367993         157.632639        0.081628       1054.971573       0.499967                       0.404161       0.840266           1.558749               0.316751      60.196714      27.292417
+min     60062.000000               10739.000000      503.000000    1338.000000       10739.000000     503.000000        503.000000           0.000000        0.000982          0.000000       0.000000                       0.000000       1.000000          -8.000000               0.000000     -99.907654     -42.500000
+25%     68121.000000              189576.000000      634.000000  295519.000000      189576.000000     634.000000        634.000000         133.000000        0.003059        900.333300       0.000000                       5.000000       1.000000          -1.000000               5.000000     -59.652069     -24.897058
+50%     74895.000000              461057.000000      795.000000  515938.000000      461057.000000     792.000000        792.000000         269.000000        0.016891       1806.500000       1.000000                       5.000000       2.000000           0.000000               5.000000      -5.334419       0.250000
+75%     83870.000000              578487.000000      855.000000  767527.000000      578487.000000     855.000000        855.000000         405.000000        0.055988       2720.200000       1.000000                       5.000000       3.000000           1.000000               5.000000      44.052994      25.404037
+max     89893.000000              890983.000000      885.000000  996988.000000      890983.000000     885.000000        885.000000         607.000000        0.949455       3900.000000       1.000000                       6.000000       4.000000           8.000000               6.000000      99.907654      42.500000
+
+================================================================================
+======================== CATEGORICAL FEATURES ANALYSIS =========================
+================================================================================
+
+
+
+================================================================================
+======================== CATEGORICAL FEATURES ANALYSIS =========================
+================================================================================
+
+Categorical Columns: 5
+Column: eventname
+Unique Values: 25
+Top 10 values:
+eventname
+pass               128975
+lpr                107131
+reception           99396
+carry               33914
+controlledexit      28923
+puckprotection      23417
+block               17931
+faceoff             16946
+shot                16348
+controlledentry     12726
+Plot saved as 'eventname_distribution.png'
+
+--------------------------------------------------
+
+Column: manpowersituation
+Unique Values: 3
+Top 10 values:
+manpowersituation
+evenStrength    463668
+powerPlay        59271
+shortHanded      18863
+Plot saved as 'manpowersituation_distribution.png'
+
+--------------------------------------------------
+
+Column: outcome
+Unique Values: 3
+Top 10 values:
+outcome
+successful      424006
+failed          117656
+undetermined       140
+Plot saved as 'outcome_distribution.png'
+
+--------------------------------------------------
+
+Column: playerprimaryposition
+Unique Values: 3
+Top 10 values:
+playerprimaryposition
+F    320229
+D    203001
+G     18572
+Plot saved as 'playerprimaryposition_distribution.png'
+
+--------------------------------------------------
+
+Column: type
+Unique Values: 102
+Top 10 values:
+type
+regular      97372
+none         93687
+contested    25812
+pass         24555
+south        20800
+deke         18417
+outlet       18298
+d2d          16795
+slot         14187
+north        13651
+Plot saved as 'type_distribution.png'
+
+================================================================================
+========================= NUMERICAL FEATURES ANALYSIS ==========================
+================================================================================
+
+
+
+================================================================================
+========================= NUMERICAL FEATURES ANALYSIS ==========================
+================================================================================
+
+Numerical Columns: 17
+Column: gameid
+Min: 60062, Max: 89893, Mean: 75565.58, Median: 74895.0
+Quartile 1: 68121.00, Quartile 3: 83870.00, IQR: 15749.00
+Standard Deviation: 8961.73
+Skewness: -0.12, Kurtosis: -1.30
+Plot saved as 'gameid_distribution.png'
+
+--------------------------------------------------
+
+Column: opposingteamgoalieoniceid
+Min: 10739.0, Max: 890983.0, Mean: 417210.29, Median: 461057.0
+Quartile 1: 189576.00, Quartile 3: 578487.00, IQR: 388911.00
+Standard Deviation: 265919.42
+Skewness: 0.30, Kurtosis: -0.87
+Plot saved as 'opposingteamgoalieoniceid_distribution.png'
+
+--------------------------------------------------
+
+Column: opposingteamid
+Min: 503, Max: 885, Mean: 744.84, Median: 795.0
+Quartile 1: 634.00, Quartile 3: 855.00, IQR: 221.00
+Standard Deviation: 125.17
+Skewness: -0.67, Kurtosis: -0.87
+Plot saved as 'opposingteamid_distribution.png'
+
+--------------------------------------------------
+
+Column: playerid
+Min: 1338, Max: 996988, Mean: 520438.76, Median: 515938.0
+Quartile 1: 295519.00, Quartile 3: 767527.00, IQR: 472008.00
+Standard Deviation: 278468.89
+Skewness: -0.12, Kurtosis: -1.09
+Plot saved as 'playerid_distribution.png'
+
+--------------------------------------------------
+
+Column: teamgoalieoniceid
+Min: 10739.0, Max: 890983.0, Mean: 422826.61, Median: 461057.0
+Quartile 1: 189576.00, Quartile 3: 578487.00, IQR: 388911.00
+Standard Deviation: 265670.50
+Skewness: 0.27, Kurtosis: -0.87
+Plot saved as 'teamgoalieoniceid_distribution.png'
+
+--------------------------------------------------
+
+Column: teamid
+Min: 503, Max: 885, Mean: 742.24, Median: 792.0
+Quartile 1: 634.00, Quartile 3: 855.00, IQR: 221.00
+Standard Deviation: 125.38
+Skewness: -0.63, Kurtosis: -0.91
+Plot saved as 'teamid_distribution.png'
+
+--------------------------------------------------
+
+Column: teaminpossession
+Min: 503.0, Max: 885.0, Mean: 741.94, Median: 792.0
+Quartile 1: 634.00, Quartile 3: 855.00, IQR: 221.00
+Standard Deviation: 125.37
+Skewness: -0.63, Kurtosis: -0.91
+Plot saved as 'teaminpossession_distribution.png'
+
+--------------------------------------------------
+
+Column: currentpossession
+Min: 0.0, Max: 607.0, Mean: 270.07, Median: 269.0
+Quartile 1: 133.00, Quartile 3: 405.00, IQR: 272.00
+Standard Deviation: 157.63
+Skewness: 0.04, Kurtosis: -1.17
+Plot saved as 'currentpossession_distribution.png'
+
+--------------------------------------------------
+
+Column: xg_allattempts
+Min: 0.00098159913691, Max: 0.949455420675002, Mean: 0.05, Median: 0.0168913701625275
+Quartile 1: 0.00, Quartile 3: 0.06, IQR: 0.05
+Standard Deviation: 0.08
+Skewness: 3.64, Kurtosis: 19.16
+Plot saved as 'xg_allattempts_distribution.png'
+
+--------------------------------------------------
+
+Column: compiledgametime
+Min: 0.0, Max: 3900.0, Mean: 1813.25, Median: 1806.5
+Quartile 1: 900.33, Quartile 3: 2720.20, IQR: 1819.87
+Standard Deviation: 1054.97
+Skewness: 0.02, Kurtosis: -1.18
+Plot saved as 'compiledgametime_distribution.png'
+
+================================================================================
+============================== ADVANCED ANALYSIS ===============================
+================================================================================
+
+
+
+================================================================================
+============================== ADVANCED ANALYSIS ===============================
+================================================================================
+
+Identified performance metrics: ['scoredifferential'] (showing first 10)
+
+================================================================================
+============================= PLAYER/TEAM ANALYSIS =============================
+================================================================================
+
+
+
+================================================================================
+============================= PLAYER/TEAM ANALYSIS =============================
+================================================================================
+
+Player columns found: ['playerid', 'playerprimaryposition']
+
+Top 10 players by scoredifferential:
+Team columns found: ['opposingteamgoalieoniceid', 'opposingteamid', 'teamgoalieoniceid', 'teamid', 'teaminpossession', 'opposingteamskatersonicecount', 'teamskatersonicecount']
+
+Team performance by scoredifferential:
+
+================================================================================
+========================== INTERACTIVE VISUALIZATIONS ==========================
+================================================================================
+
+
+
+================================================================================
+========================== INTERACTIVE VISUALIZATIONS ==========================
+================================================================================
+
+
+================================================================================
+============================= TIME SERIES ANALYSIS =============================
+================================================================================
+
+
+
+================================================================================
+============================= TIME SERIES ANALYSIS =============================
+================================================================================
+
+Found potential date column: compiledgametime
+
+================================================================================
+=========================== SPORTS-SPECIFIC ANALYSIS ===========================
+================================================================================
+
+
+
+================================================================================
+=========================== SPORTS-SPECIFIC ANALYSIS ===========================
+================================================================================
+
+Goal-related columns: ['opposingteamgoalieoniceid', 'teamgoalieoniceid']
+Possession-related columns: ['teaminpossession', 'currentpossession']
+
+================================================================================
+=========================== SUMMARY AND CONCLUSIONS ============================
+================================================================================
+
+
+
+================================================================================
+=========================== SUMMARY AND CONCLUSIONS ============================
+================================================================================
+
+Dataset Summary:
+- Total records: 541802
+- Features: 22
+- Categorical features: 5
+- Numerical features: 17
+- Missing values: 683580 (5.73% of all data)
+
+Key Observations (customize based on findings):
+1. [Add observation based on the actual data]
+2. [Add observation based on the actual data]
+3. [Add observation based on the actual data]
+
+Recommendations for Further Analysis:
+1. Investigate specific player/team performance metrics
+2. Conduct comparative analysis across seasons/years if available
+3. Apply predictive modeling to identify key performance indicators
+
+
+Analysis completed successfully.
