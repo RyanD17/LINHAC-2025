@@ -645,8 +645,8 @@ def visualize_goalie_performance(goalie_metrics):
     print("\nCreating visualizations...")
     
     # Create output directory if it doesn't exist
-    if not os.path.exists('goalie_analysis'):
-        os.makedirs('goalie_analysis')
+    if not os.path.exists('assets/figures/goalie_index'):
+        os.makedirs('assets/figures/goalie_index')
     
     # Filter goalies with enough data for meaningful analysis
     min_shots = 5
@@ -753,7 +753,7 @@ def visualize_goalie_performance(goalie_metrics):
     )
     
     plt.tight_layout()
-    plt.savefig('goalie_analysis/save_pct_vs_gsae.png', dpi=300)
+    plt.savefig('assets/figures/goalie_index/save_pct_vs_gsae.png', dpi=300)
     plt.close()
     
     # Plot 2: Goals Saved Above Expected vs Rebound Control
@@ -852,7 +852,7 @@ def visualize_goalie_performance(goalie_metrics):
     )
     
     plt.tight_layout()
-    plt.savefig('goalie_analysis/gsae_vs_rebound.png', dpi=300)
+    plt.savefig('assets/figures/goalie_index/gsae_vs_rebound.png', dpi=300)
     plt.close()
     
     # New Plot 3: Goalie Index Components
@@ -920,7 +920,7 @@ def visualize_goalie_performance(goalie_metrics):
     )
     
     plt.tight_layout()
-    plt.savefig('goalie_analysis/goalie_index_components.png', dpi=300)
+    plt.savefig('assets/figures/goalie_index/goalie_index_components.png', dpi=300)
     plt.close()
     
     # New Plot 4: Shot Quality vs Save Performance
@@ -1002,7 +1002,7 @@ def visualize_goalie_performance(goalie_metrics):
             pass
     
     plt.tight_layout()
-    plt.savefig('goalie_analysis/shot_quality_vs_save_pct.png', dpi=300)
+    plt.savefig('assets/figures/goalie_index/shot_quality_vs_save_pct.png', dpi=300)
     plt.close()
     
     # New Plot 5: Shot Quality Distribution by Save Percentage
@@ -1043,7 +1043,7 @@ def visualize_goalie_performance(goalie_metrics):
         plt.ylabel('Save Percentage', fontweight='bold')
         plt.grid(True, alpha=0.3)
         plt.tight_layout()
-        plt.savefig('goalie_analysis/save_pct_by_quality.png', dpi=300)
+        plt.savefig('assets/figures/goalie_index/save_pct_by_quality.png', dpi=300)
         plt.close()
         
         # Also create a plot showing the distribution of shots by quality
@@ -1082,7 +1082,7 @@ def visualize_goalie_performance(goalie_metrics):
         plt.ylabel('Count', fontweight='bold')
         plt.grid(True, alpha=0.3)
         plt.tight_layout()
-        plt.savefig('goalie_analysis/shot_quality_distribution.png', dpi=300)
+        plt.savefig('assets/figures/goalie_index/shot_quality_distribution.png', dpi=300)
         plt.close()
     else:
         print("Skipping shot quality distribution plot - no shot quality data in goalie metrics")
@@ -1121,7 +1121,7 @@ def visualize_goalie_performance(goalie_metrics):
         # Improve plot styling
         plt.title('Correlation Matrix of Goalie Metrics', fontsize=16, fontweight='bold')
         plt.tight_layout()
-        plt.savefig('goalie_analysis/correlation_matrix.png', dpi=300)
+        plt.savefig('assets/figures/goalie_index/correlation_matrix.png', dpi=300)
         plt.close()
     
 def save_goalie_metrics(goalie_metrics, output_path):
@@ -1226,8 +1226,8 @@ def main():
     """
     Main function to run the goalie index analysis.
     """
-    data_path = "Linhac24-25_Sportlogiq.csv"
-    output_dir = "goalie_analysis"
+    data_path = "data/Linhac24-25_Sportlogiq.csv"
+    output_dir = "results/goalie_index"
     metrics_path = f"{output_dir}/goalie_metrics.csv"
     report_path = f"{output_dir}/goalie_analysis_report.md"
     
@@ -1265,7 +1265,7 @@ def main():
     # Generate analysis report
     generate_analysis_report(goalie_metrics, report_path)
     
-    print("\nAnalysis complete! Results saved in the goalie_analysis directory.")
+    print("\nAnalysis complete! Results saved in results/goalie_index and assets/figures/goalie_index.")
     
     # Display top goalies
     top_goalies = goalie_metrics.sort_values('goalie_index', ascending=False)
